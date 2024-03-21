@@ -295,7 +295,7 @@ def contactus():
 # for creating main window
 root = Tk()
 root.title("Car Parking System")
-original_image = Image.open("ParkEase.png")#image.open is the method of PIL
+original_image = Image.open("mainwin.png")#image.open is the method of PIL
 
 # Lanczos is known for providing high-quality results when resizing images
 resized_image = original_image.resize((root.winfo_screenwidth(), root.winfo_screenheight()), Image.LANCZOS)
