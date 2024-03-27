@@ -3,10 +3,37 @@
 
 **1. Introduction:**
 The Parking Lot Position Management System is a specialized tool designed for administrators to efficiently manage parking spaces within a parking lot. This system provides intuitive features for marking and deleting parking spaces on an image representation of the parking lot. By leveraging the OpenCV library, the system offers a user-friendly interface for administrators to interact with parking space data effectively.
-![Login Window](https://github.com/Gul-Fatima/ParkEase/blob/main/Win1ss.png)
+
 
 
 **2. Features:**
+
+5. **Main Interface**:
+   - The main window (`root`) displays an image background (`mainwin.png`), providing a graphical user interface (GUI) for the application.
+   - It includes buttons for users to sign up, access the main functionality, and view contact information.
+   ![Login Window](https://github.com/Gul-Fatima/ParkEase/blob/main/Win1ss.png)
+
+1. **User Registration (Sign Up)**:
+   - The `database` function is responsible for storing user registration data (username and password) in a database file (`plproj.accdb`).
+   - It performs validation checks to ensure that the required fields are not empty and that the password and confirm password fields match.
+   - If the data is valid, it inserts the user information into the database.
+
+2. **User Authentication (Sign In)**:
+   - The `check_data_in_database` function verifies the user's credentials against the database to allow access to the application.
+   - It checks if the entered username exists and if the corresponding password matches the provided one.
+   - If the credentials are correct, it opens another window (`getstarted` function) where the user can access the main functionality of the application.
+
+3. **Parking Space Monitoring**:
+   - The `getstarted` function displays a video stream (`car video.mp4`) of a parking area.
+   - It loads positions of parking spaces from a file (`CarParkPos`) and monitors each space's occupancy by analyzing the video frames.
+   - It detects occupied and unoccupied parking spaces based on the pixel count within predefined regions.
+   - Occupied spaces are highlighted in red, while unoccupied spaces are highlighted in green.
+   - The functionality continuously loops until the user quits the application by pressing the 'q' key.
+
+4. **Contact Information**:
+   - The `contactus` function creates a window that displays contact information about the application (e.g., email, phone number, LinkedIn profile).
+   - Users can access this window by clicking the "Contact us" button from the main interface.
+
 - **Marking Parking Spaces:** Administrators can mark parking spaces on the parking lot image by simply clicking on the desired position. Upon clicking, a rectangle representing the parking space is drawn, providing a visual representation of the allocated space.
 - **Deleting Parking Spaces:** To optimize space allocation, administrators can delete existing parking spaces by right-clicking on the rectangle representing the parking space they wish to remove. This feature facilitates dynamic adjustments to parking space configurations as per requirements.
 - **Persistence:** The system ensures the persistence of parking space data across sessions. All marked parking spaces are automatically saved and loaded upon system startup, providing continuity and ease of use for administrators.
