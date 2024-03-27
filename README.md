@@ -3,17 +3,14 @@
 
 **1. Introduction:**
 The Parking Lot Position Management System is a specialized tool designed for administrators to efficiently manage parking spaces within a parking lot. This system provides intuitive features for marking and deleting parking spaces on an image representation of the parking lot. By leveraging the OpenCV library, the system offers a user-friendly interface for administrators to interact with parking space data effectively.
-<video width="320" height="240" controls>
-  <source src="https://github.com/Gul-Fatima/ParkEase/blob/main/Project_preview.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![Login Window](https://github.com/Gul-Fatima/ParkEase/blob/main/Win1ss.png)
 
 
 **2. Features:**
 - **Marking Parking Spaces:** Administrators can mark parking spaces on the parking lot image by simply clicking on the desired position. Upon clicking, a rectangle representing the parking space is drawn, providing a visual representation of the allocated space.
 - **Deleting Parking Spaces:** To optimize space allocation, administrators can delete existing parking spaces by right-clicking on the rectangle representing the parking space they wish to remove. This feature facilitates dynamic adjustments to parking space configurations as per requirements.
 - **Persistence:** The system ensures the persistence of parking space data across sessions. All marked parking spaces are automatically saved and loaded upon system startup, providing continuity and ease of use for administrators.
-
+![Empty Space Detection](https://github.com/Gul-Fatima/ParkEase/blob/main/recss.png)
 **3. Implementation Details:**
 - **Image Loading:** The system loads the parking lot image from the file 'carParkImg.png' using the OpenCV `cv2.imread()` function. This image serves as the canvas for marking and managing parking spaces.
 - **Event Handling:** Mouse click events are handled using the `cv2.setMouseCallback()` function. Left-clicking on the image triggers the marking of parking spaces, while right-clicking initiates the deletion process.
